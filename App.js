@@ -1,92 +1,115 @@
-import * as React from "react";
+import React from "react";
+
+//For Blood Donation Screen
+import Start from "./screens/start";
+import BloodDonors from "./screens/bloodDonors";
+import DonorDetails from "./screens/donorDetails";
+
+//For Pharmacy Screens
+// import Pharmacy from "./Pharmacy/start";
+// import SearchNearbyPharmacies from "./Pharmacy/searchNearbyPharmacies";
+// import FoundNearbyPharmacies from "./Pharmacy/foundNearbyPharmacies";
+// import PharmacyDetails from "./Pharmacy/pharmacyDetails";
+
+//For Lab Screens
+// import Lab from "./Lab/start";
+// import SearchLabs from "./Lab/searchLabs";
+// import FoundLabs from "./Lab/foundLabs";
+// import LabDetails from "./Lab/labDetails";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import AdminLogin from "./screens/adminLogin";
-import adminLoginVerification from "./screens/adminLoginVerification";
-import ForgotPasswordScreen from "./screens/forgotPasswordScreen";
-import Home from "./screens/home";
-import ResetPassword from "./screens/resetPasswordScreen";
-import DoctorRequests from "./screens/doctorRequestScreen";
-import AmbulanceRequests from "./screens/ambulanceRequestScreen";
-import DoctorRequestDetails from "./screens/docRequestDetails";
-import AmbulanceRequestDetails from "./screens/ambRequestDetails";
-import nav from "./screens/home";
-import DrawerNavigator from "./screens/home";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
+    //<---------------------------------------Labs------------------------------------------->
+
+    // <NavigationContainer>
+    //   <Stack.Navigator>
+    //     <Stack.Screen
+    //       name="Lab"
+    //       component={Lab}
+    //       options={{ headerShown: false }}
+    //     />
+
+    //     <Stack.Screen
+    //       name="SearchLabs"
+    //       component={SearchLabs}
+    //       options={{ headerShown: false }}
+    //     />
+
+    //     <Stack.Screen
+    //       name="FoundLabs"
+    //       component={FoundLabs}
+    //       options={{ headerShown: false }}
+    //     />
+
+    //     <Stack.Screen
+    //       name="LabDetails"
+    //       component={LabDetails}
+    //       options={{ headerShown: false }}
+    //     />
+    //   </Stack.Navigator>
+    // </NavigationContainer>
+
+    //<-------------------------------------Pharmacy-------------------------------------------------->
+
+    // For Pharmacy Screens
+    //  <NavigationContainer>
+    // <Stack.Navigator>
+    //   <Stack.Screen
+    //     name="Pharmacy"
+    //     component={Pharmacy}
+    //     options={{ headerShown: false }}
+    //   />
+
+    //   <Stack.Screen
+    //     name="SearchNearbyPharmacies"
+    //     component={SearchNearbyPharmacies}
+    //     options={{ headerShown: false }}
+    //   />
+
+    //   <Stack.Screen
+    //     name="FoundNearbyPharmacies"
+    //     component={FoundNearbyPharmacies}
+    //     options={{ headerShown: false }}
+    //   />
+
+    //   <Stack.Screen
+    //     name="PharmacyDetails"
+    //     component={PharmacyDetails}
+    //     options={{ headerShown: false }}
+    //   />
+    // </Stack.Navigator>
+    // </NavigationContainer>
+
+    //<----------------------------------------Blood Donation--------------------------------------->
+
+    //For Blood Donation Screens
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="AdminLogin"
-          component={AdminLogin}
-          options={{ headerShown: false }}
-        />
-
-        <Stack.Screen
-          name="adminLoginVerification"
-          component={adminLoginVerification}
-          options={{ headerShown: false }}
-        />
-
-        <Stack.Screen
-          name="forgotPassword"
-          component={ForgotPasswordScreen}
-          options={{ headerShown: false }}
-        />
-
-        <Stack.Screen
-          name="resetPasswordScreen"
-          component={ResetPassword}
-          options={{ headerShown: false }}
-        />
-
-        <Stack.Screen
-          name="DrawerNavigator"
-          component={DrawerNavigator}
+          name="Start"
+          component={Start}
           options={{
             headerShown: false,
-            title: "Dashboard",
-            headerStyle: { backgroundColor: "lightblue" },
           }}
         />
 
         <Stack.Screen
-          name="DoctorRequests"
-          component={DoctorRequests}
+          name="BloodDonors"
+          component={BloodDonors}
           options={{
-            title: "Doctor Requests",
-            headerStyle: { backgroundColor: "lightblue" },
+            headerShown: false,
           }}
         />
 
         <Stack.Screen
-          name="AmbulanceRequests"
-          component={AmbulanceRequests}
-          options={{
-            title: "Ambulance Requests",
-            headerStyle: { backgroundColor: "lightblue" },
-          }}
-        />
-
-        <Stack.Screen
-          name="DoctorRequestDetails"
-          component={DoctorRequestDetails}
-          options={{
-            title: "Doctor Detail",
-            headerStyle: { backgroundColor: "#EEEAE2" },
-          }}
-        />
-
-        <Stack.Screen
-          name="AmbulanceRequestDetails"
-          component={AmbulanceRequestDetails}
-          options={{
-            title: "Ambulance Detail",
-            headerStyle: { backgroundColor: "#EEEAE2" },
-          }}
+          name="DonorDetails"
+          component={DonorDetails}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
